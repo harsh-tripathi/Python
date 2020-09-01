@@ -1,30 +1,17 @@
-grocery = ["Harpic", "vim bar", "deodrant", "Bhindi",
-           "Lollypop", 56]
-# print(grocery[5])
-numbers = [2, 7, 9, 11, 3]
-# numbers.remove(9)
-# numbers.pop()
-# numbers.sort()
-# numbers = []
-# numbers.reverse()
-# numbers.append(1)
-# numbers.append(72)
-# numbers.append(5)
-# numbers.insert(2, 67)
-# print(numbers)
-# 3, 11, 9, 7, 2
-# print(numbers)
-# numbers[1] = 98
-# print(numbers)
-# Mutable - can change
-# Immutable - cannot change
-# tp = (1,)
-# print(tp)
-a= 1
-b = 8
-a, b = b,a
-# temp = a
-# a = b
-# b = temp
-print(a, b)
-
+# Dictionary is nothing but key value pairs
+d1 = {}
+# print(type(d1))
+d2 = {"Harry":"Burger",
+      "Rohan":"Fish",
+      "SkillF":"Roti",
+      "Shubham":{"B":"maggie", "L":"roti", "D":"Chicken"}}
+# d2["Ankit"] = "Junk Food"
+# d2[420] = "Kebabs"
+# print(d2)
+# del d2[420]
+# print(d2["Shubham"])
+# d3 = d2.copy()
+# del d3["Harry"]
+# d2.update({"Leena":"Toffee"})
+# print(d2.keys())
+# print(d2.items())
