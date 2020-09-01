@@ -1,20 +1,23 @@
-#This is a comment
-'''This is a comment
-Author: Thomas
-Date: 27 November 2020
-Multi-line comment ends here
-'''
-print("Main code started")
+var1 = "54"
+var4 = "32"
+var2 = 4        #it is a int variable
+var3 = 36.7     #it is a float variable
+# print(100 * str(int(var1) + int(var4)) )
+# print(100 * "Hello world\n")
+# print("Enter your number")
+# inpnum = input()
+#
+# print("You entered", int(inpnum)+10)
+"""
+str()
+int()
+float()
+"""
 
-# print statement for printing strings
-print("Thomas is a programmer", end="**")
+# print(type(var1))
 
-# Print statement with a literal
-print(1+87)
-
-#This will print "Thomas is a programmer**88" on the screen 
-
-# print("If Nothing Changes, Nothing Changes","Nothing Changes")
-# print("next line")
-# print("C:\'narry")
-print("Thomas is \n good boy \t1") #comment after statement
+print("Enter first number")
+n1 = input()
+print("Enter second number")
+n2 = input()
+print("Sum of these two numbers is", int(n1) + int(n2))
