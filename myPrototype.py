@@ -1,37 +1,31 @@
-# var1 = 6
-# var2 = 56
-# var3 = int(input())
-# if var3>var2:
-#     print("Greater")
-# elif var3==var2:
-#     print("Equal")
-# else:
-#     print("Lesser")
+# Making Faulty Calculator
+# Design a calculator which will correctly solve all the problems except
+# the following ones:
+# 45 * 3 = 555, 56+9 = 77, 56/6 = 4
+# Your program should take operator  and the two numbers as input from the user
+# and then return the result
 
-# list1 = [5, 7, 3]
-# print(15 not in list1)
-# if 15 not in list1:
-#     print("No its not in the list")
-
-# Quiz
-print("What is your age?")
-age = int(input())
-if age < 0 :
-    print("Invalid Age")
-elif age > 60 and age < 90 :
-    print("You can drive but for your safety you shouldn't drive")
-elif age > 90:
-    print("Are you comedy me, how are you even alive")
+num1 = int(input("Enter a number : "))
+num2 = int(input("Enter another number : "))
+operator = input("Which operation you want to perform : ")
+if operator == '+':
+    if num1 == 56 and num2 == 9:
+        print("Sum of these numbers =", 77)
+    elif num1 == 9 and num2 == 56:
+        print("Sum of these numbers =", 77)
+    else :
+        print("Sum of these numbers =", num1+num2)
+elif operator == '-':
+    print("Difference of these numbers =", num1-num2)
+elif operator == '/':
+    if num1 == 56 and num2 == 6:
+        print("Division of these numbers =", 4)
+    else :
+        print("Division of these numbers =", num1/num2)
 else:
-    if age<18:
-        print("You cannot drive")
-
-    elif age==18:
-        print("We will think about you")
-
-    else:
-        print("You can drive")
-
-
-
-
+    if num1 == 45 and num2 == 3:
+        print("Multiplication of these numbers =", 555)
+    elif num1 == 3 and num2 == 45:
+        print("Multiplication of these numbers =", 555)
+    else :
+        print("Multiplication of these numbers =", num1*num2)
