@@ -1,14 +1,22 @@
-# list1 = [ ["Harry", 1], ["Larry", 2],
-#           ["Carry", 6], ["Marie", 250]]
-# dict1 = dict(list1)
-#
-# for item in dict1:
-#     print(item)
-# for item, lollypop in dict1.items():
-#     print(item, "and lolly is ", lollypop)
-items = [int, float, "Harsh", 5,3, 3, 22, 21, 64, 23, 233, 23, 6]
+"""
+i=0
+while True :
+    if i+1<5:
+        i=i+1
+        continue
+    print(i+1, end=" ")
+    if i == 44:
+        break #Stop the loop
+    i = i+1
+"""
+#Yaha Par
 
-for item in items:
-    if str(item).isnumeric() and item>=6:
-        print(item)
+#Enter a number greater than 100 or keep giving input
 
+while True :
+    x = int(input("Enter a number : "))
+    if x > 100:
+        break
+    else:
+        continue
+print("Thanks for playing")
