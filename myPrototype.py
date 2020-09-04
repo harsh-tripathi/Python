@@ -1,22 +1,23 @@
-"""
-i=0
-while True :
-    if i+1<5:
-        i=i+1
-        continue
-    print(i+1, end=" ")
-    if i == 44:
-        break #Stop the loop
-    i = i+1
-"""
-#Yaha Par
-
-#Enter a number greater than 100 or keep giving input
-
-while True :
-    x = int(input("Enter a number : "))
-    if x > 100:
+number = 30
+guess = 1
+while guess <= 9:
+    num = int(input("Guess a number : "))
+    if 9-guess == 0:
+        print("You ran out of guesses.")
+        print("Man you suck at this game.")
         break
-    else:
+    elif num < number:
+        print("Guess a bigger number.")
+        print("You have",9-guess,"guesses left.")
+        guess = guess+1
         continue
-print("Thanks for playing")
+    elif num > number:
+        print("Guess a smaller number.")
+        print("You have",9-guess,"guesses left.")
+        guess = guess+1
+        continue
+    else:
+        print("Well Done, You guessed it correct!!")
+        print("Game Over!")
+        print("You answered correctly after",guess,"guesses.")
+        break
