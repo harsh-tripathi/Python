@@ -1,10 +1,10 @@
-f = open("harry.txt")
-f.seek(11)
-print(f.tell())
-print(f.readline())
-# print(f.tell())
+with open("harry.txt") as f:
+    a = f.readlines()
+    print(a)
 
-print(f.readline())
-# print(f.tell())
-f.close()
+# f = open("harry.txt", "rt")
+#
+#Isme jo open aur close karne wali dalali hai wo upar wale WITH mein ek line se ho jaati hai
+#
+# f.close()
   
