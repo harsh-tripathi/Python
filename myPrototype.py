@@ -1,16 +1,8 @@
-# Lambda functions or anonymous functions
-# def add(a, b):
-#     return a+b
-#
-# # minus = lambda x, y: x-y
-#
-# def minus(x, y):
-#     return x-y
-#
-# print(minus(9, 4))
-
-
-a =[[1, 14], [5, 6], [8,23]]
-a.sort(key=lambda x:x[1])
-print(a)
-  
+import random
+random_number = random.randint(0, 1)
+# print(random_number)
+rand = random.random() *100
+# print(rand)
+lst = ["Star Plus", "DD1", "Aaj Tak", "CodeWithHarry"]
+choice = random.choice(lst)
+print(choice)
