@@ -1,19 +1,11 @@
-import time
-initial = time.time()
+l1 = ["Bhindi", "Aloo", "chopsticks", "chowmein"]
 
-k = 0
-while(k<45):
-    print("This is harry bhai")
-    time.sleep(2)
-    k+=1
-print("While loop ran in", time.time() - initial, "Seconds")
+# i = 1
+# for item in l1:
+#     if i%2 is not 0:
+#         print(f"Jarvis please buy {item}")
+#     i += 1
 
-initial2 =time.time()
-for i in range(45):
-    print("This is harry bhai")
-print("For loop ran in", time.time() - initial2, "Seconds")
-
-
-# localtime = time.asctime(time.localtime(time.time()))
-# print(localtime)
-  
+for index, item in enumerate(l1):
+    if index%2==0:
+        print(f"Jarvis please buy {item}")
