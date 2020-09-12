@@ -1,21 +1,13 @@
-# Python File1 Code
+"""
+ Syntax of Join Function
+    string.join(iterable)
+"""
 
-def printhar(string):
-    return f"Ye string harry ko de de thakur {string}"
+lis = ["John", "cena", "Randy", "orton",
+       "Sheamus", "khali", "jinder mahal"]
 
-def add(num1, num2):
-    return num1 + num2 + 5
+# for item in lis:
+#     print(item, "and", end=" ")
 
-
-print("aand the name is", __name__)
-
-if __name__ == '__main__':
-    print(printhar("Harry1"))
-    o = add(4, 6)
-    print(o)
-  
-# Python File2 Code
-
-import tutmain1
-print("__name in tutmain2.py is set to" , __name__)
-  
+a = ", ".join(lis)
+print(a, "other wwe superstars")
