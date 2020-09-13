@@ -1,20 +1,24 @@
 class Employee:
     no_of_leaves = 8
-    pass
 
-harry = Employee()
-rohan = Employee()
+    def __init__(self, aname, asalary, arole):
+        self.name = aname
+        self.salary = asalary
+        self.role = arole
 
-harry.name = "Harry"
-harry.salary = 455
-harry.role = "Instructor"
+    def printdetails(self):
+        return f"The Name is {self.name}. Salary is {self.salary} and role is {self.role}"
 
-rohan.name = "Rohan"
-rohan.salary = 4554
-rohan.role = "Student"
 
-print(Employee.no_of_leaves)
-print(Employee.__dict__)
-Employee.no_of_leaves = 9
-print(Employee.__dict__)
-print(Employee.no_of_leaves)
+harry = Employee("Harry", 255, "Instructor")
+
+# rohan = Employee()
+# harry.name = "Harry"
+# harry.salary = 455
+# harry.role = "Instructor"
+#
+# rohan.name = "Rohan"
+# rohan.salary = 4554
+# rohan.role = "Student"
+
+print(harry.salary)
