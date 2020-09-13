@@ -1,60 +1,36 @@
-#-------SYNTAX FOR MAP---------
-map(function, iterable) 
-
-#-------SYNTAX FOR MAP----------
-filter(function, iterable)
-
-#-------SYNTAX FOR REDUCE-------
-reduce(function, iterable)
-
-#--------------------------MAP------------------------------
-# numbers = ["3", "34", "64"]
-# numbers = list(map(int, numbers))
-
-# for i in range(len(numbers)):
-#     numbers[i] = int(numbers[i])
-
-# numbers[2] = numbers[2] + 1
-# print(numbers[2])
-
-# def sq(a):
-#     return a*a
+# def function1():
+#     print("Subscribe now")
 #
-# num = [2,3,5,6,76,3,3,2]
-# square = list(map(sq, num))
-# print(square)
-# num = [2,3,5,6,76,3,3,2]
-# square = list(map(lambda x: x*x, num))
-# print(square)
+# func2 = function1
+# del function1
+# func2()
 
-
-# def square(a):
-#     return a*a
+# def funcret(num):
+#     if num==0:
+#         return print
+#     if num==1:
+#         return sum
 #
-# def cube(a):
-#     return a*a*a
+# a = funcret(1)
+# print(a)
 
-# func = [square, cube]
-# num = [2,3,5,6,76,3,3,2]
-# for i in range(5):
-#     val = list(map(lambda x:x(i), func))
-#     print(val)
-
-#--------------------------FILTER------------------------------
-# list_1 = [1,2,3,4,5,6,7,8,9]
+# def executor(func):
+#     func("this")
 #
-# def is_greater_5(num):
-#     return num>5
 #
-# gr_than_5 = list(filter(is_greater_5, list_1))
-# print(gr_than_5)
-#--------------------------REDUCE------------------------------
-from functools import reduce
+# executor(print)
 
-list1 = [1,2,3,4,2]
-num = reduce(lambda x,y:x*y, list1)
-# num = 0
-# for i in list1:
-#     num = num + i
-print(num)
+def dec1(func1):
+    def nowexec():
+        print("Executing now")
+        func1()
+        print("Executed")
+    return nowexec
 
+@dec1                                   # @ way to make a DECORATOR
+def who_is_harry():
+    print("Harry is a good boy")
+
+# who_is_harry = dec1(who_is_harry)      # Normal Way to make a DECORATOR
+
+who_is_harry()
