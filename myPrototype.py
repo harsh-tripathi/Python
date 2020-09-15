@@ -15,17 +15,14 @@ class Employee:
 
     @classmethod
     def from_dash(cls, string):
-        # params = string.split("-")
-        # print(params)
-        # return cls(params[0], params[1], params[2])
         return cls(*string.split("-"))
 
+    @staticmethod
+    def printgood(string):
+        print("This is good " + string)
 
 harry = Employee("Harry", 255, "Instructor")
 rohan = Employee("Rohan", 455, "Student")
 karan = Employee.from_dash("Karan-480-Student")
 
-print(karan.no_of_leaves)
-# rohan.change_leaves(34)
-#
-# print(harry.no_of_leaves)
+Employee.printgood("Rohan")
