@@ -1,49 +1,22 @@
-class Employee:
-    no_of_leaves = 8
-    var = 8
+class Dad:
+    basketball =6
 
-    def __init__(self, aname, asalary, arole):
-        self.name = aname
-        self.salary = asalary
-        self.role = arole
+class Son(Dad):
+    dance =1
+    basketball = 9
+    def isdance(self):
+        return f"Yes I dance {self.dance} no of times"
 
-    def printdetails(self):
-        return f"The Name is {self.name}. Salary is {self.salary} and role is {self.role}"
+class Grandson(Son):
+    dance =6
+    guitar = 1
 
-    @classmethod
-    def change_leaves(cls, newleaves):
-        cls.no_of_leaves = newleaves
+    def isdance(self):
+        return f"Jackson yeah!" \
+            f"Yes I dance very awesomely {self.dance} no of times"
 
-    @classmethod
-    def from_dash(cls, string):
-        return cls(*string.split("-"))
+darry = Dad()
+larry = Son()
+harry = Grandson()
 
-    @staticmethod
-    def printgood(string):
-        print("This is good " + string)
-
-class Player:
-    var = 9
-    no_of_games = 4
-    def __init__(self, name, game):
-        self.name = name
-        self.game =game
-
-    def printdetails(self):
-        return f"The Name is {self.name}. Game is {self.game}"
-
-class CoolProgramer(Player, Employee):
-
-    language = "C++"
-    def printlanguage(self):
-        print(self.language)
-
-harry = Employee("Harry", 255, "Instructor")
-rohan = Employee("Rohan", 455, "Student")
-
-shubham = Player("Shubham", ["Cricket"])
-karan = CoolProgramer("Karan",["Cricket"])
-# det = karan.printdetails()
-# karan.printlanguage()
-# print(det)
-print(karan.var)
+# print(darry.guitar)
