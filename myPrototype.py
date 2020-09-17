@@ -1,31 +1,21 @@
-class Employee:
-    no_of_leaves = 8
-    var = 8
-    _protec = 9         #Protected Variable Syntax
-    __pr = 98           #Private Variable Syntax
+class A:
+    classvar1 = "I am a class variable in class A"
+    def __init__(self):
+        self.var1 = "I am inside class A's constructor"
+        self.classvar1 = "Instance var in class A"
+        self.special = "Special"
 
-    def __init__(self, aname, asalary, arole):
-        self.name = aname
-        self.salary = asalary
-        self.role = arole
+class B(A):
+    classvar1 = "I am in class B"
 
-    def printdetails(self):
-        return f"The Name is {self.name}. Salary is {self.salary} and role is {self.role}"
+    def __init__(self):
+        self.var1 = "I am inside class B's constructor"
+        self.classvar1 = "Instance var in class B"
+        # super().__init__()
+        # print(super().classvar1)
 
-    @classmethod
-    def change_leaves(cls, newleaves):
-        cls.no_of_leaves = newleaves
 
-    @classmethod
-    def from_dash(cls, string):
-        return cls(*string.split("-"))
+a = A()
+b = B()
 
-    @staticmethod
-    def printgood(string):
-        print("This is good " + string)
-
-emp = Employee("harry", 343, "Programmer")
-
-print(emp._protec)               #Syntax to access Protected Variable
-
-print(emp._Employee__pr)        #Syntax to access Private Variable    
+print(b.special, b.var1, b.classvar1)
