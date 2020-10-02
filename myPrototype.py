@@ -39,3 +39,6 @@ class Square(Shape):
     
     def perimeter(self):
         print(f"ans is {previous*10}")
+        
+        
+#makke ki roti, sarso ka saag... Pull request accept nhi kia.... to chutiya ho aap
